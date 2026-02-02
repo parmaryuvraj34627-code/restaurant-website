@@ -35,7 +35,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(slideNext, 3000);
     return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /* ================= Book Table Form State ================= */
@@ -107,34 +107,47 @@ function Home() {
       </section>
 
       {/* ================= Popular Food Carousel ================= */}
-      <section className="popular-food">
-        <h2 className="popular-title animate-slide-fade">
-          Popular Food Items
-        </h2>
+<section className="popular-food">
+  <h2 className="popular-title animate-slide-fade">
+    Popular Food Items
+  </h2>
 
-        <div className="carousel-arrows">
-          <button className="carousel-btn" onClick={slidePrev} aria-label="Previous">
-            ❮
-          </button>
-          <button className="carousel-btn" onClick={slideNext} aria-label="Next">
-            ❯
-          </button>
-        </div>
-
-        <div className="carousel-wrapper">
-          <div
-            className="popular-grid"
-            style={{ transform: `translateX(-${index * CARD_WIDTH}px)` }}
-          >
-            {items.map((item, i) => (
-              <div className="popular-card" key={i}>
-                <img src={item.img} alt={item.title} />
-                <h3>{item.title}</h3>
-              </div>
-            ))}
+  <div className="carousel-container">
+    {/* SLIDER */}
+    <div className="carousel-wrapper">
+      <div
+        className="popular-grid"
+        style={{ transform: `translateX(-${index * CARD_WIDTH}px)` }}
+      >
+        {items.map((item, i) => (
+          <div className="popular-card" key={i}>
+            <img src={item.img} alt={item.title} />
+            <h3>{item.title}</h3>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+
+    {/* RIGHT SIDE LINE ARROWS */}
+    <div className="carousel-arrows side">
+      <button
+        className="carousel-btn line-btn"
+        onClick={slidePrev}
+        aria-label="Previous"
+      >
+        &#10094;
+      </button>
+
+      <button
+        className="carousel-btn line-btn"
+        onClick={slideNext}
+        aria-label="Next"
+      >
+        &#10095;
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* ================= Book Your Table Form ================= */}
       <section className="book-table">

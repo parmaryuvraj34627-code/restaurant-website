@@ -130,38 +130,45 @@
    Popular Food Carousel
 ========================= */
 .popular-food {
-  padding: 50px 10%;
+  padding: 60px 8%;
   background-color: #fff7f0;
-  text-align: center;
   position: relative;
 }
 
 .popular-title {
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
 
-/* Carousel Wrapper */
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
+/* FLEX CONTAINER */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-/* Sliding Container */
+/* SLIDER WRAPPER */
+.carousel-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* SLIDING GRID */
 .popular-grid {
   display: flex;
   gap: 25px;
   transition: transform 0.6s ease;
 }
 
-/* Cards */
+/* CARD */
 .popular-card {
-  min-width: 240px;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
+  min-width: 260px;
+  background-color: #ffffff;
+  border-radius: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
 }
 
 .popular-card img {
@@ -172,41 +179,37 @@
 
 .popular-card h3 {
   padding: 15px;
-  text-align: center;
 }
 
-/* =========================
-   Carousel Arrows
-========================= */
-.carousel-arrows {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+/* ================= RIGHT SIDE LINE BUTTONS ================= */
+.carousel-arrows.side {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
-.carousel-btn {
-  width: 55px;
-  height: 55px;
+/* LINE STYLE BUTTON */
+.carousel-btn.line-btn {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: none;
-  background: white;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.carousel-btn:hover {
-  transform: scale(1.1);
-}
-
-.carousel-btn svg {
-  width: 22px;
-  height: 22px;
+  background: transparent;
+  border: 2px solid #ff4d4d;
   color: #ff4d4d;
+  font-size: 26px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.carousel-btn.line-btn:hover {
+  background-color: #ff4d4d;
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 /* =========================
@@ -343,4 +346,56 @@
 
 .animate-slide-fade {
   animation: slideFadeIn 0.8s forwards;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .popular-card {
+    min-width: 200px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .book-form input,
+  .book-form textarea {
+    flex: 1 1 100%;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .carousel-arrows.side {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
