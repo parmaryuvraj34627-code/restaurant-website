@@ -1,0 +1,242 @@
+/* =========================
+   About Page General
+========================= */
+.about-page {
+  width: 100%;
+  padding: 3rem 5%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  background: #ffe8d6;
+  gap: 40px;
+  text-align: center;
+}
+
+.about-hero-content {
+  flex: 1 1 400px;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  color: #ff7f50;
+  margin-bottom: 20px;
+}
+
+.about-hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.about-hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Story & Mission / About Content
+========================= */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 10%;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-box h2 {
+  font-size: 2rem;
+  color: #ff7f50;
+  margin-bottom: 10px;
+}
+
+.about-box p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   CTA Section
+========================= */
+.about-cta {
+  text-align: center;
+  background: #ff7f50;
+  color: #fff;
+  padding: 60px 10%;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #fff;
+  color: #ff7f50;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ffd8c0;
+  color: #ff7f50;
+}
+
+/* =========================
+   Animations
+========================= */
+.animate-slide-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideFadeIn 0.8s forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   Social Icons
+========================= */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon.fb { background: #3b5998; }
+.social-icon.ig { background: #e4405f; }
+.social-icon.tw { background: #1da1f2; }
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   Scroll-to-top Button
+========================= */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.scroll-top-btn:hover {
+  background: #ff6333;
+  transform: translateY(-5px);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  .about-hero,
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image img {
+    width: 300px;
+  }
+}

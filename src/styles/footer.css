@@ -1,0 +1,109 @@
+/* Footer Container */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 60px 10%;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Logo Section */
+.footer-logo-section {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff7f50;
+}
+
+.footer-tagline {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Grid Sections */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ff7f50;
+}
+
+.footer-box p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 3px 0;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  color: #333;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  background: #ff4d4d;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Optional: differentiate icons by platform */
+.social-icon.fb { background: #3b5998; color: #fff; }
+.social-icon.ig { background: #e1306c; color: #fff; }
+.social-icon.tw { background: #1da1f2; color: #fff; }
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

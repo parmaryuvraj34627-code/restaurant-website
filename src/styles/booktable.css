@@ -1,0 +1,79 @@
+.book-table-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 50px 10%;
+}
+
+.book-table-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.book-table-hero h1 {
+  font-size: 3rem;
+  color: #ff7f50;
+  margin-bottom: 15px;
+}
+
+.book-table-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.book-table-form-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-msg {
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.book-table-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book-table-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #555;
+}
+
+.book-table-form input,
+.book-table-form textarea {
+  padding: 10px 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+.book-table-form textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  padding: 15px;
+  background: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ff6333;
+}
