@@ -6,6 +6,10 @@
   color: #333;
   margin: 0;
   padding: 0;
+  min-height: 100vh;       /* Added combined style */
+  padding: 100px 20px;     /* Added combined style */
+  background-color: #f9f9f9; /* Added combined style */
+  text-align: center;      /* Added combined style */
 }
 
 /* =========================

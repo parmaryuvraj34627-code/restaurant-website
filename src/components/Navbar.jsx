@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -16,14 +16,7 @@ function Navbar() {
           Foodie
         </NavLink>
 
-        {/* Hamburger */}
-        <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        {/* Menu */}
+        {/* Navigation Links */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           <li>
             <NavLink to="/" end className="nav-link" onClick={closeMenu}>
@@ -35,21 +28,33 @@ function Navbar() {
               Menu
             </NavLink>
           </li>
-         
           <li>
             <NavLink to="/about" className="nav-link" onClick={closeMenu}>
-              about
+              About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className="nav-link" onclick={closeMenu}>
-            contact
+            <NavLink to="/contact" className="nav-link" onClick={closeMenu}>
+              Contact
             </NavLink>
           </li>
         </ul>
+
+        {/* Hamburger Button */}
+        <button
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls="nav-menu"
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
